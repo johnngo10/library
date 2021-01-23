@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: white;
+  background-color: #065535;
+  width: 100%;
+}
+
+/* .fa-book-reader {
+  font-size: 40px;
+  padding-right: 10px;
+} */
+
+#svg-logo {
+  padding-right: 10px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card {
+  padding: 40px;
+  margin: 20px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px lightgrey;
+}
+
+.book-info-container {
+  text-align: center;
+}
+
+.book-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0;
+  padding-bottom: 60px;
+}
+
+.book-author {
+  font-style: italic;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.book-pages {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  border-top: 2px solid #3333;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.read-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#read {
+  padding: 0 10px;
+}
