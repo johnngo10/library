@@ -189,7 +189,39 @@
           <i class="fas fa-trash-alt"></i>
         </div>
       </div>
+      <div class="card">
+        <div class="book-info-container">
+          <p class="book-title">Game of Thrones</p>
+          <p class="book-author">By George R. R. Martin</p>
+          <p class="book-pages">500 pages</p>
+        </div>
+        <div class="buttons-container">
+          <div class="read-container">
+            <p id="read">Read</p>
+            <input type="checkbox" />
+          </div>
+          <i class="fas fa-trash-alt"></i>
+        </div>
+      </div>
+      <div class="card" id="card-add">
+        <div id="add-container">
+          <i class="fas fa-plus"></i>
+        </div>
+      </div>
     </main>
+    <div id="form-container">
+      <form action="#" id="form">
+        <input type="text" placeholder="Title" class="book-info-input" />
+        <input type="text" placeholder="Author" class="book-info-input" />
+        <input type="text" placeholder="Pages" class="book-info-input" />
+        <div id="form-read-container">
+          <label for="form-read" id="form-read-label">Read?</label>
+          <!-- <p>Read?</p> -->
+          <input type="checkbox" id="form-read" />
+        </div>
+        <input type="submit" id="submit" />
+      </form>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

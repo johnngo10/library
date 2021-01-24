@@ -1,3 +1,4 @@
+const cardAdd = document.getElementById('card-add');
 let myLibrary = [];
 
 function Book(title, author, pages, read) {
