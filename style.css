@@ -51,6 +51,9 @@ main {
   background-color: #eeeeee;
   border-radius: 10px;
   box-shadow: 2px 2px 6px lightgrey;
+  width: 200px;
+  height: 285px;
+  position: relative;
 }
 
 .book-info-container {
@@ -58,18 +61,20 @@ main {
 }
 
 .book-title {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
-  margin: 20px 0;
-  padding-bottom: 60px;
+  margin: 0 0 30px 0;
+  /* padding-bottom: 60px; */
   color: #333333;
+  /* word-break: break-all; */
 }
 
 .book-author {
   font-style: italic;
-  font-size: 18px;
-  margin-top: 20px;
+  font-size: 16px;
+  margin-top: 0 0 30px 0;
   color: #333333;
+  word-break: break-all;
 }
 
 .book-pages {
@@ -83,8 +88,11 @@ main {
   justify-content: center;
   justify-content: space-evenly;
   border-top: 2px solid #3333;
-  margin-top: 40px;
   padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 86%;
 }
 
 .read-container {
@@ -115,10 +123,21 @@ main {
   color: #3333;
 }
 
+/* Delete */
+
+.fa-trash-alt {
+  transition: transform 0.2s;
+}
+
+.fa-trash-alt:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
 /* Form */
 #form-container {
-  /* display: none; */
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -134,7 +153,8 @@ main {
 }
 
 #form {
-  border: 1px solid black;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,7 +162,7 @@ main {
   align-items: center;
   height: 400px;
   width: 400px;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   background-color: white;
 }
 
@@ -150,8 +170,13 @@ main {
   font-size: 20px;
   width: 67%;
   padding: 10px;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   border-radius: 5px;
+  background-color: #eeeeee;
+}
+
+.book-info-input:focus {
+  outline: none;
 }
 
 #form-read-container {
@@ -164,6 +189,7 @@ main {
 
 #form-read {
   margin: 0 10px;
+  color: black;
 }
 
 #form-read-label {
@@ -191,4 +217,33 @@ main {
 
 #submit:focus {
   outline: none;
+}
+
+/* Popup animation */
+.zoom {
+  animation: zoom 0.6s;
+  @keyframes zoom {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+}
+
+/* Exit form */
+#exit-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+
+#exit {
+  font-size: 18px;
+  color: rgb(189, 189, 189);
+}
+
+#exit:hover {
+  cursor: pointer;
 }

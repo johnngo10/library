@@ -104,8 +104,8 @@
       </svg>
       <h1>Library</h1>
     </header>
-    <main>
-      <div class="card">
+    <main id="main">
+      <!-- <div class="card">
         <div class="book-info-container">
           <p class="book-title">Game of Thrones</p>
           <p class="book-author">By George R. R. Martin</p>
@@ -114,95 +114,25 @@
         <div class="buttons-container">
           <div class="read-container">
             <p id="read">Read</p>
-            <input type="checkbox" />
+            <input type="checkbox" checked />
           </div>
           <i class="fas fa-trash-alt"></i>
         </div>
       </div>
       <div class="card">
         <div class="book-info-container">
-          <p class="book-title">Game of Thrones</p>
-          <p class="book-author">By George R. R. Martin</p>
+          <p class="book-title">Dragonball Z Budokai Tenkaichi 3</p>
+          <p class="book-author">By George R. R. Martin dwadaw dwadadadaadaa</p>
           <p class="book-pages">500 pages</p>
         </div>
         <div class="buttons-container">
           <div class="read-container">
             <p id="read">Read</p>
-            <input type="checkbox" />
+            <input type="checkbox" checked />
           </div>
           <i class="fas fa-trash-alt"></i>
         </div>
-      </div>
-      <div class="card">
-        <div class="book-info-container">
-          <p class="book-title">Game of Thrones</p>
-          <p class="book-author">By George R. R. Martin</p>
-          <p class="book-pages">500 pages</p>
-        </div>
-        <div class="buttons-container">
-          <div class="read-container">
-            <p id="read">Read</p>
-            <input type="checkbox" />
-          </div>
-          <i class="fas fa-trash-alt"></i>
-        </div>
-      </div>
-      <div class="card">
-        <div class="book-info-container">
-          <p class="book-title">Game of Thrones</p>
-          <p class="book-author">By George R. R. Martin</p>
-          <p class="book-pages">500 pages</p>
-        </div>
-        <div class="buttons-container">
-          <div class="read-container">
-            <p id="read">Read</p>
-            <input type="checkbox" />
-          </div>
-          <i class="fas fa-trash-alt"></i>
-        </div>
-      </div>
-      <div class="card">
-        <div class="book-info-container">
-          <p class="book-title">Game of Thrones</p>
-          <p class="book-author">By George R. R. Martin</p>
-          <p class="book-pages">500 pages</p>
-        </div>
-        <div class="buttons-container">
-          <div class="read-container">
-            <p id="read">Read</p>
-            <input type="checkbox" />
-          </div>
-          <i class="fas fa-trash-alt"></i>
-        </div>
-      </div>
-      <div class="card">
-        <div class="book-info-container">
-          <p class="book-title">Game of Thrones</p>
-          <p class="book-author">By George R. R. Martin</p>
-          <p class="book-pages">500 pages</p>
-        </div>
-        <div class="buttons-container">
-          <div class="read-container">
-            <p id="read">Read</p>
-            <input type="checkbox" />
-          </div>
-          <i class="fas fa-trash-alt"></i>
-        </div>
-      </div>
-      <div class="card">
-        <div class="book-info-container">
-          <p class="book-title">Game of Thrones</p>
-          <p class="book-author">By George R. R. Martin</p>
-          <p class="book-pages">500 pages</p>
-        </div>
-        <div class="buttons-container">
-          <div class="read-container">
-            <p id="read">Read</p>
-            <input type="checkbox" />
-          </div>
-          <i class="fas fa-trash-alt"></i>
-        </div>
-      </div>
+      </div> -->
       <div class="card" id="card-add">
         <div id="add-container">
           <i class="fas fa-plus"></i>
@@ -211,9 +141,27 @@
     </main>
     <div id="form-container">
       <form action="#" id="form">
-        <input type="text" placeholder="Title" class="book-info-input" />
-        <input type="text" placeholder="Author" class="book-info-input" />
-        <input type="text" placeholder="Pages" class="book-info-input" />
+        <div id="exit-container">
+          <i class="fas fa-times" id="exit"></i>
+        </div>
+        <input
+          type="text"
+          placeholder="Title"
+          class="book-info-input"
+          id="title"
+        />
+        <input
+          type="text"
+          placeholder="Author"
+          class="book-info-input"
+          id="author"
+        />
+        <input
+          type="text"
+          placeholder="Pages"
+          class="book-info-input"
+          id="pages"
+        />
         <div id="form-read-container">
           <label for="form-read" id="form-read-label">Read?</label>
           <!-- <p>Read?</p> -->
