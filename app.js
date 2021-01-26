@@ -2,6 +2,7 @@ const cardAdd = document.getElementById('card-add');
 const main = document.getElementById('main');
 const input = document.querySelectorAll('input');
 const formContainer = document.getElementById('form-container');
+const form = document.getElementById('form');
 const submit = document.getElementById('submit');
 const exit = document.getElementById('exit');
 
@@ -120,9 +121,7 @@ cardAdd.addEventListener('click', e => {
 });
 
 // Add book when form is submitted
-submit.addEventListener('click', e => {
-  e.preventDefault();
-  const form = document.getElementById('form');
+form.addEventListener('submit', e => {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   const pages = document.getElementById('pages').value;
@@ -158,6 +157,7 @@ submit.addEventListener('click', e => {
   deleteBook();
 
   formContainer.style.display = 'none';
+  e.preventDefault();
 });
 
 // Exit Form
