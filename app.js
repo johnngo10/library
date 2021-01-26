@@ -80,6 +80,7 @@ function populate() {
     myLibrary = getObj;
     addBookToLibrary();
     deleteBook();
+    greyOut();
   }
 }
 
@@ -109,11 +110,25 @@ function checkRead() {
         }
       }
       saveToLocal();
+      greyOut();
     });
   }
 }
 
 checkRead();
+
+// Grey out books that are read
+function greyOut() {
+  const read = document.querySelectorAll('.read');
+  for (let i = 0; i < read.length; i++) {
+    const parent = read[i].parentElement.parentElement.parentElement;
+    if (read[i].checked) {
+      parent.style.backgroundColor = 'lightgrey';
+    } else {
+      parent.style.backgroundColor = '#eeeeee';
+    }
+  }
+}
 
 // Display add book form
 cardAdd.addEventListener('click', e => {
@@ -127,12 +142,7 @@ form.addEventListener('submit', e => {
   const pages = document.getElementById('pages').value;
   const formRead = document.getElementById('form-read').checked;
   const bookId = s4() + '-' + s4() + '-' + s4();
-
   const book = new Book(bookId, title, author, pages, formRead);
-
-  myLibrary.push(book);
-
-  saveToLocal();
 
   cardAdd.insertAdjacentHTML(
     'beforebegin',
@@ -146,7 +156,7 @@ form.addEventListener('submit', e => {
         <div class="buttons-container">
           <div class="read-container">
             <p id="read">Read</p>
-            <input type="checkbox" ${book.toggleRead()} />
+            <input type="checkbox" class="read" ${book.toggleRead()} />
           </div>
           <i class="fas fa-trash-alt"></i>
         </div>
@@ -154,10 +164,14 @@ form.addEventListener('submit', e => {
   `
   );
 
+  myLibrary.push(book);
+  saveToLocal();
   deleteBook();
+  checkRead();
+  greyOut();
+  e.preventDefault();
 
   formContainer.style.display = 'none';
-  e.preventDefault();
 });
 
 // Exit Form

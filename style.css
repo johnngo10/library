@@ -189,7 +189,13 @@ main {
 
 #form-read {
   margin: 0 10px;
+}
+
+input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
   color: black;
+  filter: grayscale(1);
 }
 
 #form-read-label {
